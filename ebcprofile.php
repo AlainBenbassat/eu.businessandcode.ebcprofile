@@ -29,7 +29,6 @@ function ebcprofile_civicrm_postProcess($formName, &$form) {
   }
 }
 
-
 /**
  * Implements hook_civicrm_config().
  *
@@ -37,15 +36,6 @@ function ebcprofile_civicrm_postProcess($formName, &$form) {
  */
 function ebcprofile_civicrm_config(&$config) {
   _ebcprofile_civix_civicrm_config($config);
-}
-
-/**
- * Implements hook_civicrm_xmlMenu().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_xmlMenu
- */
-function ebcprofile_civicrm_xmlMenu(&$files) {
-  _ebcprofile_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -102,54 +92,6 @@ function ebcprofile_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
   return _ebcprofile_civix_civicrm_upgrade($op, $queue);
 }
 
-/**
- * Implements hook_civicrm_managed().
- *
- * Generate a list of entities to create/deactivate/delete when this module
- * is installed, disabled, uninstalled.
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_managed
- */
-function ebcprofile_civicrm_managed(&$entities) {
-  _ebcprofile_civix_civicrm_managed($entities);
-}
-
-/**
- * Implements hook_civicrm_caseTypes().
- *
- * Generate a list of case-types.
- *
- * Note: This hook only runs in CiviCRM 4.4+.
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_caseTypes
- */
-function ebcprofile_civicrm_caseTypes(&$caseTypes) {
-  _ebcprofile_civix_civicrm_caseTypes($caseTypes);
-}
-
-/**
- * Implements hook_civicrm_angularModules().
- *
- * Generate a list of Angular modules.
- *
- * Note: This hook only runs in CiviCRM 4.5+. It may
- * use features only available in v4.6+.
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_angularModules
- */
-function ebcprofile_civicrm_angularModules(&$angularModules) {
-  _ebcprofile_civix_civicrm_angularModules($angularModules);
-}
-
-/**
- * Implements hook_civicrm_alterSettingsFolders().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_alterSettingsFolders
- */
-function ebcprofile_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _ebcprofile_civix_civicrm_alterSettingsFolders($metaDataFolders);
-}
-
 // --- Functions below this ship commented out. Uncomment as required. ---
 
 /**
@@ -157,9 +99,8 @@ function ebcprofile_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_preProcess
  *
-function ebcprofile_civicrm_preProcess($formName, &$form) {
 
-} // */
+ // */
 
 /**
  * Implements hook_civicrm_navigationMenu().
@@ -177,3 +118,12 @@ function ebcprofile_civicrm_navigationMenu(&$menu) {
   ));
   _ebcprofile_civix_navigationMenu($menu);
 } // */
+
+/**
+ * Implements hook_civicrm_entityTypes().
+ *
+ * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_entityTypes
+ */
+function ebcprofile_civicrm_entityTypes(&$entityTypes) {
+  _ebcprofile_civix_civicrm_entityTypes($entityTypes);
+}

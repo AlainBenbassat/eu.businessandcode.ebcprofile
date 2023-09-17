@@ -20,5 +20,6 @@
   <comments>-</comments>
   <civix>
     <namespace>CRM/Ebcprofile</namespace>
+    <format>22.10.0</format>
   </civix>
 </extension>
