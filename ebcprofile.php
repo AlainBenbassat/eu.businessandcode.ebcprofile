@@ -5,7 +5,8 @@ use CRM_Ebcprofile_ExtensionUtil as E;
 
 function ebcprofile_civicrm_postProcess($formName, &$form) {
   // check if it's the profile EBC Communication (id = 32)
-  if ($formName == 'CRM_Profile_Form_Edit') {
+  // OLD: if ($formName == 'CRM_Profile_Form_Edit') {
+  if (is_a($form, 'CRM_Profile_Form_Contact')) {
     $gid = $form->getVar('_gid');
     if ($gid == 32) {
       // get the contact id
